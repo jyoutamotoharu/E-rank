@@ -24,18 +24,28 @@
 <input type="radio" name="Q5">メルボルン<br>
 <input type="radio" name="Q5">キャンベラ<br>
 <br>
+中国の首都は？<br>
+<input type="radio" name="Q6">武漢<br>
+<input type="radio" name="Q6">北京<br>
+<input type="radio" name="Q6">上海<br>
+<br>
+アメリカの首都は？<br>
+<input type="radio" name="Q7">ニューヨーク<br>
+<input type="radio" name="Q7">サンフランシスコ<br>
+<input type="radio" name="Q7">ワシントン<br>
+<br>
 <input type="button" value="採点" onclick="saiten()" />
 </form>
 
 
 
 <script>
-function saiten(){
+function saiten(){//関数への引数のリスト
   var seikai=0; //正解数を入れる変数
   //答えの番号を配列に入れる
-  var trueAns = new Array(0,5,8,10,14);
+  var trueAns = new Array(0,5,8,10,14,16,20);
   //正解のラジオボタンがチェックされているか確認
-  for (i=0 ; i<5 ; i++)  {
+  for (i=0 ; i<7 ; i++)  {//0~7まで1ずつ加算を繰り返す
     if( document.radioB.elements[trueAns[i]].checked )
       seikai++;
   }
